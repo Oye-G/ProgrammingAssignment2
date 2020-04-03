@@ -42,7 +42,7 @@ cacheSolve <- function(x, ...) { ## Return a matrix that is the inverse of 'x'
       }
       
       data <- x$get() ## Grabs matrix
-      m <- solve(data) %*% data ## use matrix multiplication to calculate data (i.e. matrix) inverse
+      m <- solve(data, ...) %*% data ## use matrix multiplication to calculate data (i.e. matrix) inverse
       x$setInverse(m) ## Sets inverse
       m ## Returns matrix
 }
